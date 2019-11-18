@@ -1,0 +1,55 @@
+.menu li a{
+	
+	text-decoration:none;
+	color: white;
+	font-size: 18px;
+	padding:2px;
+}
+
+.active{
+	background-color: #63a19e;
+}
+.menu li:hover{
+	background: red;
+}
+
+.header-bottom-right a{
+	text-decoration: none;
+	color: #8f9897;
+
+}
+
+.team:hover > .details{
+	background: #ffffff;
+}
+
+.team:hover > .name{
+	background-image: url("../images/readmore2.png");
+}
+
+
+.con i{
+	font-size: 21px;
+}
+
+.footer-mid a{
+	color:white;
+}
+
+a{
+	text-decoration: none;
+}
+.footer-mid th{
+	font-size: 21px;
+	color: #467974;
+}
+.blog{
+	font-size: 21px;
+}
+
+.date{
+	color: #467974
+}
+.bloginfo a{
+	color: white;
+}
