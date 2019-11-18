@@ -3,9 +3,10 @@
 	text-decoration:none;
 	color: white;
 	font-size: 18px;
+	padding:2px;
 }
 
-.menu li.hover{
+.menu li:hover{
 	background-color: #63a19e;
 }
 
@@ -53,4 +54,45 @@
 
 .main{
 	color: #868c8c;
+}
+
+.client{
+	font-size: 20px;
+}
+
+.r{
+	color: #868c8c;
+}
+.con i{
+	font-size: 21px;
+}
+
+.footer-mid a{
+	color:white;
+}
+
+a{
+	text-decoration: none;
+}
+.footer-mid th{
+	font-size: 21px;
+	color: #467974;
+}
+.blog{
+	font-size: 21px;
+}
+
+.date{
+	color: #467974;
+}
+.bloginfo a{
+	color: white;
+}
+.clients-header{
+	
+
+	font-family: Times New Roman;
+	color: #727272;
+	font-size: 20px;
+	font-weight: bold;
 }
