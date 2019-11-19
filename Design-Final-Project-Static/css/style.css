@@ -1,0 +1,38 @@
+
+.header-container{
+	color: white;
+}
+nav{
+	font-size: 20px;
+}
+nav a{
+	text-decoration: none;
+	color: white;
+
+}
+
+.button{
+	text-align: center;
+	color:white;
+	height: 60px;
+	line-height: 60px;
+	border-radius: 30px;
+}
+.announcement{
+	font-size: 20px;
+}
+.announce-title h1{
+	font-family: Times New Roman;
+	font-size: 50px;
+}
+.num{
+	font-size: 32px;
+	font-weight: bolder;
+}
+
+
+}
+
+.button:hover{
+	background: #fdaf19;
+}
