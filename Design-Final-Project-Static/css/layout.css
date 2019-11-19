@@ -1,0 +1,95 @@
+.container{
+	width: 1920px;
+}
+
+.header-container{
+	width: 1920px;
+	background-image: url("../images/header-back.png");
+	overflow: auto;
+
+}
+header{
+	width: 1440px;
+	margin: 0 auto;
+	overflow: auto;
+
+	
+
+}
+
+
+.logo{
+	float: left;
+	width: 182px;
+	overflow: auto;
+	margin-top: 103px; 
+
+}
+
+.nav-book{
+	float: right;
+	width: 1258px;
+}
+nav{
+	float: left;
+	margin-top: 103px;
+	width: auto;
+}
+
+nav a{
+	
+	padding-left: 70px;
+	float:left;
+
+
+}
+
+.button{
+	float: right;
+	width: 300px;
+	border:1px solid white;
+	margin-bottom: 30px;
+	margin-top: 80px;
+	margin-left: -3px;
+}
+
+.header-bottom{
+	width: 1440px;
+	margin:0 auto;
+}
+
+.announcement{
+	width: 1060px;
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 148px;
+}
+
+
+}
+
+.time{
+
+	margin-right: 100px; 
+	background:#d15344;
+	margin-top: 58px;
+	opacity: 0.7;
+	float: left;
+	display: inline; 
+	width: auto;
+
+}
+
+.num{
+	text-align: center;
+	background:#d15344;
+	width: 50px;
+
+
+}
+.text{
+	text-align: center;
+	background:#d15344;
+	width: 50px;
+}
+}
