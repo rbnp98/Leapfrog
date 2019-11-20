@@ -35,13 +35,13 @@ header{
 	float: right;
 	width:55em;
 }
-nav{
+.menu{
 	float: left;
 	margin-top: 103px;
 	width: auto;
 }
 
-nav a{
+.menu a{
 	
 	padding-left: 55px;
 	float:right;
@@ -241,14 +241,47 @@ section p{
 	width: 35.625em;
 	margin: 0 auto;
 	height: 500px;
-	background: blue;
+	background: white;
 	margin-top:100px;
 	height: 1020px;  
+	color: black;
 
 
 }
-.pastspeakers-container{
-	overflow: auto; 
+.schedule-header{
+	width:33.017em;
+	margin: 0 auto;
+	text-align: center;
+}
+.schedule-body{
+	width:33.017em;
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 44px;
+
+}
+.inner-tabs{
+	width: 20em;
+	margin: 0 auto;
+	border-radius: 20px;
+	margin-top: 25px;
+	line-height:28px;
+	margin-bottom: 67px;
+}
+
+.pp{
+	float: left;
+}
+
+.about-event{
+	text-align: left;
+}
+.event-time{
+	float: left;
+	display: block;
+}
+
+.pastspeakers-container{ 
 }
 
 .testimonial-container{

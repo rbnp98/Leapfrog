@@ -14,7 +14,7 @@
 	margin: 0 auto;
 }
 header{
-	width: 68em;
+	width: 95.4385%;
 	margin: 0 auto;
 	overflow: auto;
 
@@ -33,15 +33,15 @@ header{
 
 .nav-book{
 	float: right;
-	width:55em;
+	width:80.8823%;
 }
-nav{
+.menu{
 	float: left;
 	margin-top: 103px;
 	width: auto;
 }
 
-nav a{
+.menu a{
 	
 	padding-left: 55px;
 	float:right;
@@ -64,7 +64,7 @@ nav a{
 }
 
 .announcement{
-	width: 41.1666em;
+	width: 57.7776%;
 	margin: 0 auto;
 	text-align: center;
 	margin-top: 148px;
@@ -74,13 +74,13 @@ nav a{
 .countdown{
 	border-radius: 10px;
 	margin: 0 auto;
-	width: 28em;
+	width: 68.0163%;
 	margin-top: 62px;
 	overflow: auto;
 }
 
 .time{
-	width: 7em;
+	width: 25%;
 	background:#d85641;
 	float: left;
 	padding-top: 20px;
@@ -88,7 +88,7 @@ nav a{
 }
 
 .buttons{
-		width: 32.85em;
+		width: 79.7977%;
 		margin: 0 auto;
 		overflow: auto;
 		margin-top: 50px;
@@ -117,9 +117,14 @@ nav a{
 	margin-bottom: 124px;
 	background:white; 
 }
+.section-holder{
+	width: 71.25em;
+	margin: 0 auto;
+	margin-bottom:120px;  
+}
 
 section{
-	width:42.81em;
+	width:60.0842%;
 	margin: 0 auto;
 	text-align: center;
 	margin-top:134px;
@@ -142,8 +147,12 @@ section p{
 		 background-image: linear-gradient(-100deg, #f0474a , #fdaf19);
 		 height: 438px;
 }
+.fact-holder{
+	width: 71.35em;
+	margin: 0 auto;
+}
 .facts{
-	width: 49em;
+	width:68.7719%;
 	margin:0 auto;
 	padding-top: 120px;
 	overflow: auto;
@@ -167,7 +176,7 @@ section p{
 .speakers-outer{
 	width: 71.25em;
 	margin: 0 auto;
-	margin-top: -135px;
+	margin-top: -270px;
 	padding-bottom: 69px;
 	padding-top: 124px;
 	text-align: center;
@@ -178,14 +187,15 @@ section p{
 
 }
 .speakers-inner{
-	width:60em;
+	width:84.2105%;
 	margin: 0 auto;
 	margin-top:50px; 
+	overflow: auto;
 }
 
 .speaker{
 	position: relative;
-	width: 18.5em; 
+	width: 30.8333%; 
 	float: left;
 	margin-bottom: 20px;
 	margin-right: 20px;
@@ -200,7 +210,7 @@ section p{
 }
 
 .speaker-img{
-	width: 18em;
+	width: 97.2972%;
 	height: 360px;
 
 }
@@ -238,17 +248,83 @@ section p{
 
 }
 .schedule-inner{
-	width: 35.625em;
+	width: 50%;
 	margin: 0 auto;
 	height: 500px;
-	background: blue;
+	background: white;
 	margin-top:100px;
 	height: 1020px;  
 
 
 }
-.pastspeakers-container{
-	overflow: auto; 
+.accordions{
+	width:78%;
+	background:#f3f3f3;
+	margin: 0 auto;
+	overflow: auto;
+
+}
+
+#accordion{
+	width: 75.3589%;
+	float:left;
+
+}
+
+
+#accordion section p{
+	display:none;
+	text-align: center;
+
+}
+
+#accordion section a{
+	
+	text-decoration: none;
+
+}
+
+
+#accordion section:target p{
+	display: block;
+
+}
+
+
+#accordion-mini{
+	width:24%;
+	float: right;
+}
+
+#accordion-mini section p{
+	display:none;
+	text-align: center;
+
+}
+
+#accordion-mini section a{
+	
+	text-decoration: none;
+
+}
+
+
+#accordion-mini section:target p{
+	display: block;
+
+
+}
+
+#accordion-mini section:target{
+	background:#ffffff;
+	
+
+}
+
+
+
+
+.pastspeakers-container{ 
 }
 
 .testimonial-container{
@@ -264,7 +340,7 @@ section p{
 }
 
 .testimonials{
-	width: 60em;
+	width:84.2105%;
 	margin: 0 auto;
 	background: white;
 	height:600px; 
@@ -276,7 +352,7 @@ section p{
 }
 
 .testimonial{
-	width:23.8em;
+	width:39.6666%;
 	height:267px;
 	float: left; 
 	margin-right: 3em;
@@ -288,7 +364,7 @@ section p{
 }
 
 .review{
-	width: 20.8205em;
+	width: 87.4810%;
 	height: 208px;
 	background:white; 
 	padding-left:75px;
@@ -310,12 +386,13 @@ section p{
 	margin-top: 20px;
 }
 
-.fact-container-2 .facts{
-		width: 35em;
+
+.fact-container-2  .fact-holder .facts{
+		width: 49.1228%;
 }
 
 .button-holder{
-	width: 13em;
+	width: 18.2456%;
 	margin: 0 auto;
 	margin-top:-57px; 
 }
@@ -324,8 +401,13 @@ section p{
 
 
 }
+.sponsor-holder{
+	width: 71.25em;
+	margin: 0 auto;
+}
+
 .our-sponsors{
-	width: 60em;
+	width: 84.2105%;
 	background:white; 
 	height: 600px;
 	margin: 0 auto;
@@ -334,7 +416,7 @@ section p{
 }
 
 .sponsor-logo{
-	width: 12em;
+	width: 20%;
 	height:135px;
 	display: block;
 	float: left;
@@ -346,8 +428,15 @@ section p{
 }
 
 .media-sponsors{
-	width:48em;
+	width:80%;
 	margin:0 auto;
+}
+
+.media-sponsors .sponsor-logo{
+	width: 25%;
+	height:135px;
+	display: block;
+	float: left;
 }
 
 
@@ -398,7 +487,7 @@ section p{
 }
 
 .get-updates input{
-	width: 10.12em;
+	width: 14.2035%;
 	margin: 0 auto;
 	display:inline;
 	font-size: 20px;
@@ -432,23 +521,13 @@ section p{
 
 }
 
-.get-updates input{
-	width: 10.12em;
+.footer-holder{
+	width: 71.25em;
 	margin: 0 auto;
-	display:inline;
-	font-size: 20px;
-	font-weight: normal;
-	margin-top: 70px;
-	text-align: left;
-	background: transparent; 
-	height: 40px;
-	border-radius: 20px;
-	border:none;
-
 }
 
 footer{
-	width:60em;
+	width:84.2105%;
 	margin: 0 auto;
 	padding-top: 120px;
 }
@@ -487,8 +566,375 @@ footer{
 
 }
 
-.footer-gallery{
+label{
+	display:none ;
+	
+}
 
+#toggle{
+	display: none;
+	float: right;
+}
+
+
+
+
+@media only screen and (max-width: 768px){
+	.header-top{
+		width: 48em;
+	}
+	.header-bottom{
+		width: 48em;
+	}
+	.section-holder{
+		width: 48em;
+	}
+	.fact-holder{
+		width: 48em;
+	}
+	.speakers-outer{
+		width: 48em;
+	}
+	.whitebar{
+		width: 48em;
+	}
+	.schedule-outer{
+		width:48em;
+	}
+	.testimonials-holder{
+		width:48em;
+	}
+	.sponsor-holder{
+		width:48em;
+	}
+	.footer-holder{
+		width: 48em;
+	}
+
+
+
+	label{
+		display: block;
+		cursor:pointer
+		width:160px;
+	}
+	.menu{
+		display: none;
+		float: none;
+		text-align: center;
+		margin-top: 0px;
+		float: left;
+		width: 70%;
+	}
+	#toggle:checked + .menu{
+		display: block;
+	}
+
+	.menu  a{
+		display: block;
+		float: none;
+		margin: 0px;
+		font-size: 21px;
+		border: 1px solid white;
+		border-radius: 20px;
+		padding:0px;
+		line-height: 50px; 
+	}
+
+	.announcement{
+		margin-top: 60px;
+	}
+
+	.countdown{
+		margin-top: 20px;
+	}
+	.buttons{
+		margin-top: 20px;
+	}
+	.nav-book a .button{
+		font-size: 20px;
+		margin-top: 0px;
+	}
+	.play{
+		display: none;
+	}
+	.facts{
+		margin:0 auto;
+		width: 100%;
+	}
+	.facts h1{
+		text-align: left;
+	}
+	.speaker{
+		width: 46.9%;
+	}
+
+	.testimonial{
+		width: 90%;
+		font-size: 25px;
+	}
+	.testimonial.testimonial1{
+		display: none;
+	}
+	.fact-container-2 .facts .fact{
+		display: none;
+	}
+	.fact-container-2 .facts .fact1{
+		display: none;
+	}
+	footer{
+		font-size: 25px;
+		padding-bottom: 100px; 
+		overflow: hidden;
+	}
+	.footer-left{
+		width: 100%;
+		text-align: center;
+	}
+	.footer-mid{
+		width: 100%;
+		text-align: center;
+	}
+	.footer-right{
+		width:100%;
+		text-align: center;
+		margin-top: 40px;
+	}
+	.footer-gallery{
+		margin-left: 120px;
+		margin-bottom: 100px;
+		padding-top: 10px;
+	}
+
+	.footer-gallery li a .footer-img{
+		width: 20%;
+		height:110px;
+		padding-bottom: 10px;
+
+	}
+
+	.footer-icon{
+		margin-left: 100px;
+	}
+
+    .location{
+    	left:140px;
+    	bottom: 200px;
+    }
+
+    .location .contact li{
+    	font-size: 25px;
+
+    }
 
 
 }
+
+.tabs
+
+@media only screen and (max-width: 375px){
+	.header-top{
+		width:23.4375em;
+	}
+	.header-bottom{
+		width:23.4375em;
+	}
+	.section-holder{
+		width:23.4375em;
+	}
+	.fact-holder{
+		width:23.4375em;
+	}
+	.speakers-outer{
+		width:23.4375em;
+	}
+	.whitebar{
+		width: 23.4375em;
+	}
+	.schedule-outer{
+		width:23.4375em;
+	}
+	.testimonials-holder{
+		width:23.4375em;
+	}
+	.sponsor-holder{
+		width:23.4375em;
+	}
+	.footer-holder{
+		width: 23.4375em;
+	}
+
+
+
+	label{
+		display: block;
+		cursor:pointer
+		width:160px;
+	}
+	.menu{
+		display: none;
+		float: none;
+		text-align: center;
+		margin-top: 0px;
+		float: left;
+		width: 70%;
+	}
+	#toggle:checked + .menu{
+		display: block;
+	}
+
+	.menu  a{
+		display: block;
+		float: none;
+		margin: 0px;
+		font-size: 21px;
+		border: 1px solid white;
+		border-radius: 20px;
+		padding:0px;
+		line-height: 50px; 
+	}
+
+	.announcement{
+		margin-top: 20px;
+	}
+
+	.announcement .announce-title h1{
+		margin-top: 0px;
+		font-size: 26px;
+	}
+
+	.countdown{
+		display: none;}
+	.buttons{
+		margin-top: 20px;
+	}
+	.nav-book a .button{
+		font-size: 20px;
+		margin-top: 0px;
+	}
+	.nav-book a .button{
+		font-size: 20px;
+		margin-top: 10px;
+	}
+	.header-bottom .announcement a .button1{
+		display: none;
+	}
+	.section-container{
+		height: 900px;
+		margin-top: 40px;
+	}
+
+	section{
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+	.section-container .section-holder section p{
+		margin-bottom: 20px;
+		margin-top: 10px; 
+	}
+
+	.section-container .section-holder section a .button{
+		margin-left: 30px;
+	}
+
+	section a .button.button1{
+		display: none;
+	}
+	.play{
+		display: none;
+	}
+	.speaker-outer{
+		margin-top: -22px;
+	}
+	.fact-container{
+		display: none;
+	}
+	.speakers-outer{
+		padding-top: 30px;
+	}
+	.pastspeakers-container .speakers-inner {
+    padding-top: 10px;
+    margin-top: 10px;
+    }
+
+	.speaker{
+		width:100%
+	}
+
+	.gradient{
+		display: none;
+	}
+
+	.testimonial-container{
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	.testimonials{
+		height: 500px;
+	}
+
+	.testimonial{
+		width:80%;
+		font-size: 22px;
+		
+	}
+	.testimonial.testimonial2{
+		display: none;
+
+	}
+	}
+	.testimonial.testimonial1{
+		display: none;
+	}
+	.review{
+		height: 400px;
+
+	}
+	.fact-container-2 .facts .fact{
+		display: none;
+	}
+	.fact-container-2 .facts .fact1{
+		display: none;
+	}
+	.ours-sponsors{
+
+	}
+	.sponsor-logo{
+		width: 50%;
+	}
+	.media-sponsors{
+		display: none;
+	}
+	footer{
+		font-size: 20px;
+		padding-bottom: 100px; 
+		overflow: hidden;
+	}
+	.footer-left{
+		width: 100%;
+		text-align: center;
+	}
+	.footer-mid{
+		width: 100%;
+		text-align: center;
+	}
+	.footer-right{
+		display: none;
+	}
+
+
+	.footer-icon{
+		display: none;
+	}
+
+    .location{
+    	left:10px;
+    	bottom: 20px;
+    }
+
+    .location .contact li{
+    	font-size: 25px;
+	}
+}
+
+
