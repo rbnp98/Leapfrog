@@ -76,6 +76,9 @@ nav a{
 	margin-bottom: 15px;
 }
 
+.pastspeakers-container .speakers-outer{
+border: none; 
+}
 .title{
 	color: #e1e1e1;
 	margin-top: 
@@ -238,4 +241,14 @@ input::placeholder{
 	width:30px;
 	height: 15px;
 	display: inline-block;
+}
+
+
+
+.schedule-inner .tabs a{
+	color: black;
+
+}
+.schedule-inner .inner-tabs a{
+	color: black;
 }
