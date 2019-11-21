@@ -7,8 +7,6 @@
 	width: 100%;
 	height: 100%;
 }
-
-
 .header-top{
 	width: 71.25em;
 	margin: 0 auto;
@@ -17,20 +15,13 @@ header{
 	width: 95.4385%;
 	margin: 0 auto;
 	overflow: auto;
-
-	 
-
 }
-
-
 .logo{
 	float: left;
 	
 	overflow: auto;
 	margin-top: 72px; 
-
 }
-
 .nav-book{
 	float: right;
 	width:80.8823%;
@@ -40,29 +31,21 @@ header{
 	margin-top: 103px;
 	width: auto;
 }
-
 .menu a{
-	
 	padding-left: 55px;
 	float:right;
-
-
 }
-
 .button{
 	float: right;
 	padding: 12px 15px;
 	border:1px solid white;
 	margin-bottom: 30px;
 	margin-top: 90px;
-	margin-left:;
 }
-
 .header-bottom{
 	width: 71.25em;
 	margin:0 auto;
 }
-
 .announcement{
 	width: 57.7776%;
 	margin: 0 auto;
@@ -70,7 +53,6 @@ header{
 	margin-top: 148px;
 	overflow: auto;
 }
-
 .countdown{
 	border-radius: 10px;
 	margin: 0 auto;
@@ -78,7 +60,6 @@ header{
 	margin-top: 62px;
 	overflow: auto;
 }
-
 .time{
 	width: 25%;
 	background:#d85641;
@@ -86,7 +67,6 @@ header{
 	padding-top: 20px;
 	padding-bottom: 20px; 
 }
-
 .buttons{
 		width: 79.7977%;
 		margin: 0 auto;
@@ -96,7 +76,6 @@ header{
 .announcement a{
 	text-decoration: none;
 }
-
 .announcement .button{
 	float:none;
 	margin-right: 20px;
@@ -105,14 +84,12 @@ header{
 	line-height: 60px;
 
 }
-
 .play{
 	width:38px;
 	height: 42px;
 	margin: 0 auto;
 	margin-top: 90px;
 }
-
 .section-container{
 	margin-bottom: 124px;
 	background:white; 
@@ -122,7 +99,6 @@ header{
 	margin: 0 auto;
 	margin-bottom:120px;  
 }
-
 section{
 	width:60.0842%;
 	margin: 0 auto;
@@ -130,19 +106,14 @@ section{
 	margin-top:134px;
 	font-size: 21px; 
 }
-
 section p{
 	margin-top: 42px;
 	margin-bottom: 70px;
 }
-
 .section-container .button{
 		margin-right: 33px;
 		overflow: auto;
-
-
 }
-
 .fact-container{
 		 background-image: linear-gradient(-100deg, #f0474a , #fdaf19);
 		 height: 438px;
@@ -172,7 +143,6 @@ section p{
 .speaker-container{
 	height: auto;
 }
-
 .speakers-outer{
 	width: 71.25em;
 	margin: 0 auto;
@@ -184,7 +154,6 @@ section p{
 	overflow: hidden;
 	background: white;
 	border-bottom: none; 
-
 }
 .speakers-inner{
 	width:84.2105%;
@@ -192,36 +161,27 @@ section p{
 	margin-top:50px; 
 	overflow: auto;
 }
-
 .speaker{
 	position: relative;
 	width: 30.8333%; 
 	float: left;
 	margin-bottom: 20px;
 	margin-right: 20px;
-
 }
-
-
 .pastspeakers-container .speakers-inner{
 	padding-top: 100px;
 	background:white;
 
 }
-
 .speaker-img{
 	width: 97.2972%;
 	height: 360px;
-
 }
-
 .speaker-about{
 	position: absolute;
 	bottom: 38px;
 	left: 34px;
-
 }
-
 .gradient{
 	height: 170px;
 	background-image: linear-gradient(-100deg, #f0474a , #fdaf19); 
@@ -233,10 +193,6 @@ section p{
 	margin: 0 auto;
 	background:white;
 }
-
-.schedule-container{
-}
-
 .schedule-outer{
 	background: white;
 	width:71.25em;
@@ -255,9 +211,6 @@ section p{
 	margin-top:100px;
 	height: 1020px;  
 	color: black;
-	
-
-
 }
 .schedule-header{
 	width:92.6792%;
@@ -269,10 +222,7 @@ section p{
 	margin: 0 auto;
 	text-align: center;
 	margin-top: 44px;
-
 }
-
-
 .inner-tabs{
 	width: 60.5748%;
 	margin: 0 auto;
@@ -281,13 +231,11 @@ section p{
 	line-height:28px;
 	margin-bottom: 67px;
 }
-
 .pp{
 	float: left;
 	margin-right: 30px;
 	padding-bottom: 70px;
 }
-
 .about-event{
 	text-align: left;
 	color: black;
@@ -296,41 +244,27 @@ section p{
 	float: left;
 	display: block;
 }
-
 .plus{
 	width: 15px;
 	height: 17px;
 	display: inline-block;
 	margin-left: 100px;
-
 }
-
 .minus{
 	width: 15px;
 	height: 17px;
 	display: none;
 	margin-left: 100px;
-
 }
-
-
-
-
-.pastspeakers-container{ 
-}
-
 .testimonial-container{
 	background: white;
 
 }
-
 .testimonial-container {
 	background: white;
 	padding-top: 100px;
 	margin-bottom: 165px;
-
 }
-
 .testimonials{
 	width:84.2105%;
 	margin: 0 auto;
@@ -338,11 +272,9 @@ section p{
 	height:600px; 
 	margin-top: 50px;
 }
-
 .testimonial-container header p{
 	margin-top: 20px;
 }
-
 .testimonial{
 	width:39.6666%;
 	height:267px;
@@ -352,9 +284,7 @@ section p{
 	padding-left:50px; 
 	margin-top: 10px;
 	margin-bottom: 80px;
-
 }
-
 .review{
 	width: 87.4810%;
 	height: 208px;
@@ -363,7 +293,6 @@ section p{
 	padding-top:58px; 
 	box-shadow: 0px 0px 8px 8px #fbfbfb;
 }
-
 .dp{
 	width: 100px;
 	height: 100px;
@@ -373,12 +302,9 @@ section p{
 	background-color: black;
 	border-radius: 50%;
 }
-
 .review strong{
 	margin-top: 20px;
 }
-
-
 .fact-container-2  .fact-holder .facts{
 		width: 49.1228%;
 }
@@ -390,53 +316,41 @@ section p{
 }
 .sponsors-container{
 	background:white;
-
-
 }
 .sponsor-holder{
 	width: 71.25em;
 	margin: 0 auto;
 }
-
 .our-sponsors{
 	width: 84.2105%;
 	background:white; 
 	height: 600px;
 	margin: 0 auto;
 	margin-top:120px; 
-
 }
-
 .sponsor-logo{
 	width: 20%;
 	height:135px;
 	display: block;
 	float: left;
 }
-
 .sponsors-list{
 	list-style: none;
 	padding-top: 20px;
 }
-
 .media-sponsors{
 	width:80%;
 	margin:0 auto;
 }
-
 .media-sponsors .sponsor-logo{
 	width: 25%;
 	height:135px;
 	display: block;
 	float: left;
 }
-
-
 .map-container{
 	height: auto;
-
 }
-
 .map{
 	height:600px;
 	position: relative;
@@ -458,9 +372,7 @@ section p{
 	width: 18px;
 	height: 18px;
 	display: inline-block;
-	clear: 
 }
-
 .contact{
 	list-style: none;
 	font-size: 20px;
@@ -468,16 +380,13 @@ section p{
 }
 .contact li{
 	padding-top: 20px;
-
 }
-
 .social{
 	width: 25px;
 	height: 25px;
 	float: left;
 	margin-right:30px; 
 }
-
 .get-updates input{
 	width: 14.2035%;
 	margin: 0 auto;
@@ -490,7 +399,6 @@ section p{
 	height: 40px;
 	border-radius: 20px;
 	border:none;
-
 }
 
 .email-holder{
@@ -498,46 +406,36 @@ section p{
 	border:1px solid white;
 	margin-bottom: 30px;
 	margin-top: 90px;
-	margin-left:;
 	display: inline;
 	border-radius: 20px;
 	overflow: auto;
-
 }
 
 .email{
 	width:20px;
 	height: 20px;
 	display: inline-block;
-
-
 }
-
 .footer-holder{
 	min-width: 71.25em;
 	margin: 0 auto;
 }
-
 footer{
 	width:84.2105%;
 	margin: 0 auto;
 	padding-top: 120px;
 }
-
 .footer-left{
 	width:20em;
 	height: 300px;
 	float: left;
 	padding-right: 100px; 
-
 }
-
 .footer-mid{
 	width: 8em;
 	height: 300px;
 	float:left;
 	padding-right: 100px;
-
 }
 
 .footer-right{
@@ -555,14 +453,10 @@ footer{
 .footer-left p{
 	margin-bottom: 30px;
 	margin-top: 10px;
-
 }
-
 label{
 	display:none ;
-	
 }
-
 #toggle{
 	display: none;
 	float: right;
@@ -602,12 +496,9 @@ label{
 	.footer-holder{
 		width: 48em;
 	}
-
-
-
 	label{
 		display: block;
-		cursor:pointer
+		cursor:pointer;
 		width:160px;
 	}
 	.menu{
@@ -675,38 +566,7 @@ label{
 		display: none;
 	}
 	footer{
-		font-size: 25px;
-		padding-bottom: 100px; 
-		overflow: hidden;
-	}
-	.footer-left{
-		width: 100%;
-		text-align: center;
-	}
-	.footer-mid{
-		width: 100%;
-		text-align: center;
-	}
-	.footer-right{
-		width:100%;
-		text-align: center;
-		margin-top: 40px;
-	}
-	.footer-gallery{
-		margin-left: 120px;
-		margin-bottom: 100px;
-		padding-top: 10px;
-	}
-
-	.footer-gallery li a .footer-img{
-		width: 20%;
-		height:110px;
-		padding-bottom: 10px;
-
-	}
-
-	.footer-icon{
-		margin-left: 100px;
+		display: none;
 	}
 
     .location{
@@ -718,8 +578,6 @@ label{
     	font-size: 25px;
 
     }
-
-
 }
 
 
@@ -756,10 +614,9 @@ label{
 		width:22.5em;
 	}
 
-
 	label{
 		display: block;
-		cursor:pointer
+		cursor:pointer;
 		width:160px;
 	}
 	.menu{
@@ -795,7 +652,8 @@ label{
 	}
 
 	.countdown{
-		display: none;}
+		display: none;
+	}
 	.buttons{
 		margin-top: 20px;
 	}
@@ -873,7 +731,6 @@ label{
 		display: none;
 
 	}
-	}
 	.testimonial.testimonial1{
 		display: none;
 	}
@@ -896,18 +753,18 @@ label{
 	.media-sponsors{
 		display: none;
 	}
+
+	.footer-container{
+		display:none;
+	}
 	footer{
-		font-size: 20px;
-		padding-bottom: 100px; 
-		overflow: hidden;
+		display: none;
 	}
 	.footer-left{
-		width: 100%;
-		text-align: center;
+		display: none;
 	}
 	.footer-mid{
-		width: 100%;
-		text-align: center;
+		display: none;
 	}
 	.footer-right{
 		display: none;
@@ -926,6 +783,12 @@ label{
     .location .contact li{
     	font-size: 25px;
 	}
+
+	.schedule-outer{
+		height:1300px;
+	}
+	
+	.pp{
+		display: none;
+	}
 }
-
-

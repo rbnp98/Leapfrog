@@ -55,7 +55,6 @@ header{
 	border:1px solid white;
 	margin-bottom: 30px;
 	margin-top: 90px;
-	margin-left:;
 }
 
 .header-bottom{
@@ -438,7 +437,6 @@ section p{
 	width: 18px;
 	height: 18px;
 	display: inline-block;
-	clear: 
 }
 
 .contact{
@@ -478,19 +476,15 @@ section p{
 	border:1px solid white;
 	margin-bottom: 30px;
 	margin-top: 90px;
-	margin-left:;
 	display: inline;
 	border-radius: 20px;
 	overflow: auto;
-
 }
 
 .email{
 	width:20px;
 	height: 20px;
 	display: inline-block;
-
-
 }
 
 .get-updates input{
