@@ -238,86 +238,78 @@ section p{
 }
 
 .schedule-outer{
+	background: white;
 	width:71.25em;
 	margin:0 auto;
-	background:red;
-	height: 600px;
+	height: auto;
 	overflow: auto;
 	margin-top: -66px;
 	height: 1120px;  
-
+	border:3px solid #fcfcfc;
+	margin-bottom: 50px;
 }
 .schedule-inner{
 	width: 50%;
 	margin: 0 auto;
-	height: 500px;
 	background: white;
 	margin-top:100px;
 	height: 1020px;  
+	color: black;
+	
 
 
 }
-.accordions{
-	width:78%;
-	background:#f3f3f3;
+.schedule-header{
+	width:92.6792%;
 	margin: 0 auto;
-	overflow: auto;
-
-}
-
-#accordion{
-	width: 75.3589%;
-	float:left;
-
-}
-
-
-#accordion section p{
-	display:none;
 	text-align: center;
-
 }
-
-#accordion section a{
-	
-	text-decoration: none;
-
-}
-
-
-#accordion section:target p{
-	display: block;
-
-}
-
-
-#accordion-mini{
-	width:24%;
-	float: right;
-}
-
-#accordion-mini section p{
-	display:none;
+.schedule-body{
+	width:92.6792%;
+	margin: 0 auto;
 	text-align: center;
-
-}
-
-#accordion-mini section a{
-	
-	text-decoration: none;
+	margin-top: 44px;
 
 }
 
 
-#accordion-mini section:target p{
+.inner-tabs{
+	width: 60.5748%;
+	margin: 0 auto;
+	border-radius: 20px;
+	margin-top: 25px;
+	line-height:28px;
+	margin-bottom: 67px;
+}
+
+.pp{
+	float: left;
+	margin-right: 30px;
+	padding-bottom: 70px;
+}
+
+.about-event{
+	text-align: left;
+	color: black;
+}
+.event-time{
+	float: left;
 	display: block;
+}
 
+.plus{
+	width: 15px;
+	height: 17px;
+	display: inline-block;
+	margin-left: 100px;
 
 }
 
-#accordion-mini section:target{
-	background:#ffffff;
-	
+.minus{
+	width: 15px;
+	height: 17px;
+	display: none;
+	margin-left: 100px;
 
 }
 
@@ -522,7 +514,7 @@ section p{
 }
 
 .footer-holder{
-	width: 71.25em;
+	min-width: 71.25em;
 	margin: 0 auto;
 }
 
@@ -730,40 +722,39 @@ label{
 
 }
 
-.tabs
 
-@media only screen and (max-width: 375px){
+
+@media only screen and (max-width: 360px){
 	.header-top{
-		width:23.4375em;
+		width:22.5em;
 	}
 	.header-bottom{
-		width:23.4375em;
+		width:22.5em;
 	}
 	.section-holder{
-		width:23.4375em;
+		width:22.5em;
 	}
 	.fact-holder{
-		width:23.4375em;
+		width:22.5em;
 	}
 	.speakers-outer{
-		width:23.4375em;
+		width:22.5em;
 	}
 	.whitebar{
-		width: 23.4375em;
+		width: 22.5em;
 	}
 	.schedule-outer{
-		width:23.4375em;
+		width:22.5em;
 	}
 	.testimonials-holder{
-		width:23.4375em;
+		width:22.5em;
 	}
 	.sponsor-holder{
-		width:23.4375em;
+		width:22.5em;
 	}
 	.footer-holder{
-		width: 23.4375em;
+		width:22.5em;
 	}
-
 
 
 	label{

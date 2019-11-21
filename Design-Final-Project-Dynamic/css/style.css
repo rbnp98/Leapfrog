@@ -76,6 +76,89 @@ nav a{
 	margin-bottom: 15px;
 }
 
+.tabs a{
+	padding:0 40px;
+	border-right:1px solid #e9e9e9;  
+	color: black;
+	font-weight: bold;
+}
+
+.tabs a.right{
+	padding:0 40px;
+	border-right:none; 
+}
+
+.tabs a:hover{
+	color: #f0474a
+}
+
+.inner-tabs {
+	background:#f3f3f3;
+
+}
+
+.inner-tabs a{
+	padding-right:15px;
+	color: #6f6f6f;
+	font-weight: bold;
+}
+
+.inner-tabs a:hover{
+	color: black;
+}
+
+
+#accordion div p{
+	display:none;
+	text-align: center;
+
+}
+
+#accordion div a{
+	
+	text-decoration: none;
+
+}
+
+
+#accordion div:target p{
+	display: block;
+
+
+}
+#accordion div:target .plus{
+	display: none;
+
+
+}
+
+#accordion div:target .minus{
+	display:inline-block;
+
+
+}
+#accordion #item1.acc{
+ 	overflow: auto;
+ 	border-bottom: 1px solid #e9e9e9;
+}
+#accordion #item2.acc{
+ 	overflow: auto;
+ 	border-bottom: 1px solid #e9e9e9;
+}
+}
+#accordion #item3.acc{
+ 	overflow: auto;
+ 	border-bottom: 1px solid #e9e9e9;
+}
+}
+
+
+
+
+
+
+
+
 .pastspeakers-container .speakers-outer{
 border: none; 
 }

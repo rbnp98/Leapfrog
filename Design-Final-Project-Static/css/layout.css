@@ -228,23 +228,23 @@ section p{
 }
 
 .schedule-outer{
+	background: white;
 	width:71.25em;
 	margin:0 auto;
-	background:red;
-	height: 600px;
+	height: auto;
 	overflow: auto;
 	margin-top: -66px;
 	height: 1120px;  
-
+	border:3px solid #fcfcfc;
 }
 .schedule-inner{
 	width: 35.625em;
 	margin: 0 auto;
-	height: 500px;
 	background: white;
 	margin-top:100px;
 	height: 1020px;  
 	color: black;
+	
 
 
 }
@@ -260,6 +260,10 @@ section p{
 	margin-top: 44px;
 
 }
+
+#accordion{
+	height: 600px;
+}
 .inner-tabs{
 	width: 20em;
 	margin: 0 auto;
@@ -271,17 +275,40 @@ section p{
 
 .pp{
 	float: left;
+	margin-right: 30px;
+	padding-bottom: 70px;
 }
 
 .about-event{
 	text-align: left;
+	color: black;
 }
 .event-time{
 	float: left;
 	display: block;
 }
 
+.plus{
+	width: 15px;
+	height: 17px;
+	display: inline-block;
+	margin-left: 100px;
+
+}
+
+.minus{
+	width: 15px;
+	height: 17px;
+	display: none;
+	margin-left: 100px;
+
+}
+
+
+
+
 .pastspeakers-container{ 
+	overflow: auto;
 }
 
 .testimonial-container{
@@ -293,6 +320,7 @@ section p{
 	background: white;
 	padding-top: 100px;
 	margin-bottom: 165px;
+	margin-top: 120px;
 
 }
 
