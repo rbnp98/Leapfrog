@@ -94,7 +94,6 @@ nav a{
 
 .inner-tabs {
 	background:#f3f3f3;
-
 }
 
 .inner-tabs a{
@@ -123,19 +122,13 @@ nav a{
 
 #accordion div:target p{
 	display: block;
-
-
 }
 #accordion div:target .plus{
 	display: none;
-
-
 }
 
 #accordion div:target .minus{
 	display:inline-block;
-
-
 }
 #accordion #item1.acc{
  	overflow: auto;
@@ -145,26 +138,15 @@ nav a{
  	overflow: auto;
  	border-bottom: 1px solid #e9e9e9;
 }
-}
 #accordion #item3.acc{
  	overflow: auto;
  	border-bottom: 1px solid #e9e9e9;
 }
-}
-
-
-
-
-
-
-
-
 .pastspeakers-container .speakers-outer{
 border: none; 
 }
 .title{
 	color: #e1e1e1;
-	margin-top: 
 }
 
 .speakers-inner h1{
