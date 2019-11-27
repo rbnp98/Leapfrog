@@ -426,20 +426,20 @@ footer{
 	padding-top: 120px;
 }
 .footer-left{
-	width:20em;
+	width:33.3333%;
 	height: 300px;
 	float: left;
 	padding-right: 100px; 
 }
 .footer-mid{
-	width: 8em;
+	width: 13.3333%;
 	height: 300px;
 	float:left;
 	padding-right: 100px;
 }
 
 .footer-right{
-	width: 19em;
+	width: 31.6666%;
 	height: 300px; 
 	float: left;
 }
