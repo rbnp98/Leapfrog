@@ -1,0 +1,110 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+
+.carousel-container{
+    width:40em;
+    height:480px;
+    margin:0 auto; 
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 30px;
+    
+}
+
+.carousel-wrapper{
+    display: flex;
+    width:100%;
+
+}
+
+button{
+	font-size: 40px;
+	color:black;	
+	padding: 5px;
+	opacity:0.8;
+	cursor: pointer;
+}
+button:hover{
+  background: black;
+  color: white;
+}
+
+button.prev-btn{
+	position: absolute;
+	left:0px;
+	top:220px;
+}
+button.next-btn{
+	position: absolute;
+	right:0px;
+	top:220px;
+}
+
+.dot0 {
+  cursor: pointer;
+  height: 35px;
+  width: 35px;
+  margin: 0 2px;
+  background-color: black;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  position: absolute;
+  left:240px;
+  bottom: 0px;
+  opacity: 0.5;
+  border: 1px solid white;
+}
+
+.dot1 {
+  cursor: pointer;
+  height: 35px;
+  width: 35px;
+  margin: 0 2px;
+  background-color: black;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  position: absolute;
+  left:290px;
+  bottom: 0px;
+  opacity:0.5;
+  border: 1px solid white;
+}
+.dot2 {
+  cursor: pointer;
+  height: 35px;
+  width: 35px;
+  margin: 0 2px;
+  background-color: black;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  position: absolute;
+  left:340px;
+  bottom: 0px;
+  opacity: 0.5;
+  border: 1px solid white;
+}
+
+.dot3 {
+  cursor: pointer;
+  height: 35px;
+  width: 35px;
+  margin: 0 2px;
+  background-color: black;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  position: absolute;
+  left:390px;
+  bottom: 0px;
+  opacity: 0.5;
+  border: 1px solid white;
+}
+
+.active{
+  background-color: white;
+}
