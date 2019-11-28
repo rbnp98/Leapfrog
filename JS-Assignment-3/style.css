@@ -1,0 +1,15 @@
+.app {
+  height: 525px;
+  width: 525px;
+  background: #dfdfdf;
+  cursor: pointer;
+  position: relative;
+  margin-right: 40px;
+  float: left;
+}
+
+
+.box {
+  position: absolute;
+  border-radius: 50%;
+}
