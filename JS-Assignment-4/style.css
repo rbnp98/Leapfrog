@@ -1,0 +1,32 @@
+.app{
+	width: 474px;
+	margin: 0 auto;
+	height: 640px;
+	position: relative;
+	background: #4b4d4f;
+	border: 10px solid black;
+	overflow-y: hidden;
+}
+
+.score{
+	width: 200px;
+	float:left;
+	background: #c0f0ed;
+	height: 60px;
+	margin-left: 50px;
+	border-radius: 30px;
+}
+
+.car{
+	position: absolute;
+
+}
+
+.app-wrapper{
+	background-image: url(images/bg.png);
+	position: absolute;
+	height: 14000px;
+	width: 474px;
+	background-repeat: repeat-y;
+	bottom: 0px;
+}
