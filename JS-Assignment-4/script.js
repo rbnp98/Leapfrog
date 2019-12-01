@@ -231,6 +231,7 @@ function Game(parentElement) {
   restart.style.fontWeight = 'bold';
   restart.style.textAlign = 'center';
   restart.style.cursor = 'pointer';
+  restart.style.textDecoration = 'underline';
   restart.addEventListener('click', function () {
     window.location.reload();
   });
