@@ -304,8 +304,8 @@ function Game(parentElement) {
 
         enemyCars[i].move(counter);  //move enemy car
         if (((myCar.height + myCar.y) >= enemyCars[i].y) && myCar.x == enemyCars[i].x) { //check for collision
-          window.cancelAnimationFrame(request); //stop animation
           enemyCars[i].element.style.backgroundImage = "url(images/blast.png)";// change background of car to blast
+          window.cancelAnimationFrame(request); //stop animation
           myCar.element.style.display = 'none';
           gameOver.style.display = 'block';// display gameover and restart
           restart.style.display = 'block';
