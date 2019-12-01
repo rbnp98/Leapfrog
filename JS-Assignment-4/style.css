@@ -1,32 +1,46 @@
 .app{
 	width: 474px;
 	margin: 0 auto;
-	height: 640px;
+	height: 610px;
 	position: relative;
-	background: #4b4d4f;
-	border: 10px solid black;
 	overflow-y: hidden;
+	border: 5px solid black;
+	
 }
 
-.score{
-	width: 200px;
-	float:left;
-	background: #c0f0ed;
-	height: 60px;
-	margin-left: 50px;
-	border-radius: 30px;
+.scoreboard{
+	position: absolute;
+	z-index: 100;
 }
 
 .car{
 	position: absolute;
+	background-size: contain;
+	z-index: 15;
 
 }
 
 .app-wrapper{
-	background-image: url(images/bg.png);
 	position: absolute;
-	height: 14000px;
-	width: 474px;
 	background-repeat: repeat-y;
-	bottom: 0px;
+	z-index: 10;
+}
+
+.game-over{
+	position: absolute;
+	z-index: 19;
+}
+
+.restart{
+	position: absolute;
+	z-index: 19;
+}
+
+.game-name{
+	position: absolute;
+	z-index: 19;
+}
+.new-game{
+	position: absolute;
+	z-index: 19;
 }
