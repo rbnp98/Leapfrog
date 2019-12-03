@@ -1,5 +1,6 @@
 // window.localStorage.setItem('highest', 0); //To reset highscore
-
+var bulletFlag = 1;
+var bulletFire = 0;
 //===============================================CLASS CAR=============================================================
 function Car(parentElement) {
   this.x = 10;
@@ -14,7 +15,7 @@ function Car(parentElement) {
 }
 
 
-Car.prototype.init = function (first_argument) {
+Car.prototype.init = function () {
   var car = document.createElement('div');
   car.style.height = this.height + 'px';
   car.style.width = this.width + 'px';
@@ -49,7 +50,7 @@ function EnemyCar(...args) {
 EnemyCar.prototype = Object.create(Car.prototype);
 EnemyCar.prototype.move = function (counter) {
   this.y -= this.speed;
-  if (counter < 7200) { this.speed += 0.0015; }
+  this.speed += 0.0015;
 
   this.draw()
 }
@@ -76,6 +77,7 @@ MyCar.prototype.move = function (key) {
   if ((key.keyCode == '68' || key.keyCode == '39') && this.x == 138) {
     this.x = 138 + 72;
   }
+
   this.draw()
 }
 
@@ -83,6 +85,64 @@ MyCar.prototype.move = function (key) {
 //============================================FUNCTION TO CALCULATE RANDOM NUM==================================================================
 function getRandomArbitrary(min, max) {
   return Math.random() * (max - min) + min;
+}
+
+//=========================================CLASS BULLET=================================================================================
+function Bullet(parentElement) {
+  this.x = shufflePosition([153, 226, 300])[0];
+  this.y = 10;
+  this.speed = 5;
+  this.width = 30;
+  this.height = 38;
+  this.element = null;
+  this.parentElement = parentElement;
+  var that = this;
+  this.init = function () {
+    var bullet = document.createElement('div');
+    bullet.style.height = this.height + 'px';
+    bullet.style.width = this.width + 'px';
+    // bullet.style.display = 'none';
+    bullet.classList.add('bullet');
+    this.parentElement.appendChild(bullet);
+    this.element = bullet;
+    this.draw();
+
+    return this;
+  };
+
+  this.setPostion = function (x, y) {
+    this.x = x;
+    this.y = y;
+  };
+
+  this.draw = function () {
+    this.element.style.left = this.x + 'px';
+    this.element.style.bottom = this.y + 'px';
+  };
+
+  this.move = function (key) {
+
+    if ((key.keyCode == '32' || key.keyCode == '38') && this.y == 10 && bulletFlag == 0) {
+      bulletFire = 1;
+
+
+    }
+    if ((key.keyCode == '65' || key.keyCode == '37') && this.x == 226 && bulletFire == 0) {
+      this.x = 226 - 73;
+    }
+    if ((key.keyCode == '65' || key.keyCode == '37') && this.x == 300 && bulletFire == 0) {
+      this.x = 300 - 74;
+    }
+    if ((key.keyCode == '68' || key.keyCode == '39') && this.x == 226 && bulletFire == 0) {
+      this.x = 226 + 74;
+    }
+    if ((key.keyCode == '68' || key.keyCode == '39') && this.x == 153 && bulletFire == 0) {
+      this.x = 153 + 73;
+    }
+
+    this.draw()
+  };
+
 }
 
 
@@ -111,9 +171,10 @@ function shufflePosition(array) {
 function Game(parentElement) {
   var WIDTH = 474;
   var CONTAINER_HEIGHT = 600;
-  var WRAPPER_HEIGHT = 14000;
+  var WRAPPER_HEIGHT = 140000;
   var enemyCars = [];
   var myCar = null;
+  var bullet = null;
   var highest = window.localStorage.getItem('highest');
   var scoreboard = document.createElement('div');
   var highscore = document.createElement('div');
@@ -126,6 +187,7 @@ function Game(parentElement) {
 
   this.parentElement = parentElement;
   score = 0;
+  var that = this;
 
   //===========================Scoreboard======================
   scoreboard.setAttribute('class', 'scoreboard');
@@ -196,7 +258,7 @@ function Game(parentElement) {
   parentElement.appendChild(newGame);
 
   //===========================Road and background======================== 
-  appWrapper.style.height = '14000px';
+  appWrapper.style.height = '140000px';
   appWrapper.style.width = '474px';
   appWrapper.style.bottom = '0px';
   appWrapper.setAttribute('class', 'app-wrapper');
@@ -261,12 +323,26 @@ function Game(parentElement) {
     }
   }
 
+//plaving bullet
+  this.placeBullet = function () {
+    bullet = new Bullet(this.parentElement).init();
+    bullet.element.style.backgroundImage = "url('images/bullet.png')";
+    bullet.draw();
+  }
+
+  this.moveBullet = function (key) {
+    this.key = key;
+    bullet.move(key);
+  }
+
+
   //moving player's car, key is the key player pressed
   this.moveMyCar = function (key) {
     this.key = key;
-
     myCar.move(key);
   }
+
+
 
   this.startGame = function () {
     var counter = 0; //counter for frames per second
@@ -276,6 +352,7 @@ function Game(parentElement) {
 
     this.placeMyCar();//place player's car
     this.placeEnemyCar();//place enemy's car
+    this.placeBullet();
 
     function moveRoadAndEnemy(timestamp) {
       request = window.requestAnimationFrame(moveRoadAndEnemy);
@@ -284,8 +361,37 @@ function Game(parentElement) {
       if (bottom >= WRAPPER_HEIGHT - CONTAINER_HEIGHT - 600) { // if translated beyond the container put the wrapper back at the top
         bottom = CONTAINER_HEIGHT;
       }
+
       appWrapper.style.bottom = (-bottom) + 'px';
 
+
+      if (bulletFire) {
+
+        bullet.y += 5;
+        bullet.draw();
+        bulletFlag = 1;
+        for (var i = 0; i < enemyCars.length; i++) { // checking for bullet nd enemy car collision
+          if ((bullet.element.style.display != 'none') && ((bullet.height + bullet.y) > enemyCars[i].y) &&
+            (enemyCars[i].x < bullet.x) && (bullet.x < enemyCars[i].x + enemyCars[i].width)) {
+            enemyCars[i].element.style.display = 'none';
+            bullet.element.style.display = 'none';
+
+
+          }
+        }
+
+        if (bullet.y > getRandomArbitrary(1200, 2000)) { // After bullets pass over the container they get generated fter a random time
+          delete bullet;
+          bullet = new Bullet(this.parentElement).init();
+          that.placeBullet()
+          bulletFire = 0;
+
+
+        }
+      }
+
+      if (myCar.x < bullet.x && bullet.x < (myCar.x + myCar.width)) { bulletFlag = 0; }
+      
       // translating the car downwards in a cyclic motion
       bottomOfEnemy = bottomOfEnemy + speed;
       for (var i = 0; i < enemyCars.length; i++) {
@@ -303,37 +409,64 @@ function Game(parentElement) {
         }
 
         enemyCars[i].move(counter);  //move enemy car
-        if (((myCar.height + myCar.y) >= enemyCars[i].y) && myCar.x == enemyCars[i].x) { //check for collision
+        if (((myCar.height + myCar.y) >= enemyCars[i].y) && myCar.x == enemyCars[i].x && enemyCars[i].element.style.display != 'none') { //check for collision
           enemyCars[i].element.style.backgroundImage = "url(images/blast.png)";// change background of car to blast
           window.cancelAnimationFrame(request); //stop animation
           myCar.element.style.display = 'none';
+          bullet.element.style.display = 'none';
           gameOver.style.display = 'block';// display gameover and restart
           restart.style.display = 'block';
         }
+
+
+
+
       }
       counter++;
-      if (counter < 7200) { speed = speed + 0.0015; } //increase speed} //fixing the speed for some interval of timeand constant there after
+      speed = speed + 0.0015;  //increase speed} //fixing the speed for some interval of timeand constant there after
 
     }
     window.requestAnimationFrame(moveRoadAndEnemy);
-    window.addEventListener('keydown', this.moveMyCar, false);
+    window.addEventListener('keydown', function (key) {
+      that.moveMyCar(key);
+      that.moveBullet(key);
+    }, false);
 
   }
 }
 
 
 //====================================Main======================================================
-var parentElement = document.getElementById('app');
-
-var car = new Game(parentElement);
-
-car.newGame.addEventListener('click', function () {
-  car.gameName.style.display = 'none';
-  car.newGame.style.display = 'none';
-
-  car.scoreboard.style.display = 'block';
+var parentElement = document.getElementsByClassName('app-container')[0];
+var parentElement2 = document.getElementsByClassName('app-container')[1];
 
 
-  car.startGame();
+var car1 = new Game(parentElement);
+
+
+car1.newGame.addEventListener('click', function () {
+  car1.gameName.style.display = 'none';
+  car1.newGame.style.display = 'none';
+
+  car1.scoreboard.style.display = 'block';
+
+
+  car1.startGame();
 });
+
+var car2 = new Game(parentElement2);
+
+
+car2.newGame.addEventListener('click', function () {
+  car2.gameName.style.display = 'none';
+  car2.newGame.style.display = 'none';
+
+  car2.scoreboard.style.display = 'block';
+
+
+  car2.startGame();
+});
+
+
+
 
