@@ -1,6 +1,7 @@
-.app{
+.app-container{
 	width: 474px;
-	margin: 0 auto;
+	margin-right: 30px;
+	float: left;
 	height: 610px;
 	position: relative;
 	overflow-y: hidden;
@@ -43,4 +44,10 @@
 .new-game{
 	position: absolute;
 	z-index: 19;
+}
+
+.bullet{
+	position: absolute;
+	z-index: 15;
+
 }
