@@ -438,7 +438,6 @@ function Game(parentElement) {
 
 //====================================Main======================================================
 var parentElement = document.getElementsByClassName('app-container')[0];
-var parentElement2 = document.getElementsByClassName('app-container')[1];
 
 
 var car1 = new Game(parentElement);
@@ -454,18 +453,6 @@ car1.newGame.addEventListener('click', function () {
   car1.startGame();
 });
 
-var car2 = new Game(parentElement2);
-
-
-car2.newGame.addEventListener('click', function () {
-  car2.gameName.style.display = 'none';
-  car2.newGame.style.display = 'none';
-
-  car2.scoreboard.style.display = 'block';
-
-
-  car2.startGame();
-});
 
 
 
