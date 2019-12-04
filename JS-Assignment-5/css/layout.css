@@ -1,0 +1,14 @@
+#container {
+    /* height: 500px;
+    width: 1000px; */
+    border: 1px solid black;
+    margin: 0 auto;
+    margin-top: 10px;
+    background-image: url("../images/bg1.jpg");
+    overflow: hidden;
+}
+
+.images{
+	width: 100%;
+	height: 100%;
+}
