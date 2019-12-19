@@ -1,0 +1,32 @@
+#container {
+  background: #ececec;
+}
+
+#table {
+  font-family: "Verdana";
+}
+
+#faster {
+  font-family: "Verdana";
+}
+
+#download {
+  background: #3b5998;
+  font-family: "Verdana";
+  color: white;
+}
+
+#runBest {
+  font-family: "Verdana";
+  background: #3b5998;
+  color: white;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+tr {
+  border-bottom: 1px solid #8080806e;
+}
+
