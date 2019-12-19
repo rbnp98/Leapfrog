@@ -6,16 +6,6 @@ class Matrix {
     this.data = Array(this.rows).fill().map(() => Array(this.cols).fill(0));
   }
 
-  copy() {
-    let m = new Matrix(this.rows, this.cols);
-    for (let i = 0; i < this.rows; i++) {
-      for (let j = 0; j < this.cols; j++) {
-        m.data[i][j] = this.data[i][j];
-      }
-    }
-    return m;
-  }
-
 
   add(n) {
     if (n instanceof Matrix) {
@@ -58,22 +48,6 @@ class Matrix {
       });
   }
 
-
-
-  // random weights between -1 and 1
-  randomize() {
-    return this.map(e => Math.random() * 2 - 1);
-  }
-
-
-
-  static transpose(matrix) {
-    return new Matrix(matrix.cols, matrix.rows)
-      .map((_, i, j) => matrix.data[j][i]);
-  }
-
-
-
   multiply(n) {
     if (n instanceof Matrix) {
       if (this.rows !== n.rows || this.cols !== n.cols) {
@@ -89,6 +63,19 @@ class Matrix {
     }
   }
 
+  static transpose(matrix) {
+    return new Matrix(matrix.cols, matrix.rows)
+      .map((_, i, j) => matrix.data[j][i]);
+  }
+
+
+  static map(matrix, func) {
+    // Apply a function to every element of matrix
+    return new Matrix(matrix.rows, matrix.cols)
+      .map((e, i, j) => func(matrix.data[i][j], i, j));
+  }
+
+
   map(func) {
     // Apply a function to every element of matrix
     for (let i = 0; i < this.rows; i++) {
@@ -100,12 +87,12 @@ class Matrix {
     return this;
   }
 
-  // create a row vector from the given matrix
-  static fromArray(arr) {
+  // create a matrix object from an array 
+  static toMatrix(arr) {
     return new Matrix(arr.length, 1).map((e, i) => arr[i]);
   }
 
-  // create a row * col matrix from the given row vector
+  // create an array from a matrix object
   toArray() {
     let arr = [];
     for (let i = 0; i < this.rows; i++) {
@@ -116,16 +103,22 @@ class Matrix {
     return arr;
   }
 
-  static map(matrix, func) {
-    // Apply a function to every element of matrix
-    return new Matrix(matrix.rows, matrix.cols)
-      .map((e, i, j) => func(matrix.data[i][j], i, j));
+  // random weights between -1 and 1
+  randomize() {
+    return this.map(e => Math.random() * 2 - 1);
   }
 
-  print() {
-    console.table(this.data);
-    return this;
+  copy() {
+    let m = new Matrix(this.rows, this.cols);
+    for (let i = 0; i < this.rows; i++) {
+      for (let j = 0; j < this.cols; j++) {
+        m.data[i][j] = this.data[i][j];
+      }
+    }
+    return m;
   }
+
+
 }
 
 

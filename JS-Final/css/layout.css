@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#container{
+    width: 1200px;
+   
+    margin: 0 auto;
+    margin-top: 20px;
+    background: red;
+    overflow: auto;
+}
+
+#config{
+    padding-top: 50px; 
+    margin-left: 850px;
+}
+
+#table{
+    display: block;
+    font-family: 'Verdana';
+    margin-top: 20px;
+}
+
+#faster{
+    font-family : 'Verdana';
+    margin-top: 20px;
+}
+#download{
+    margin-top: 100px;
+    padding: 7px;
+}
+
+#runBest{
+    margin-top: 100px;
+    margin-left: 40px;
+    padding: 7px;
+}
