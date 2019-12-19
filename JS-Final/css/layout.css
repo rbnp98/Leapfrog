@@ -1,38 +1,57 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
-#container{
-    width: 1200px;
-   
-    margin: 0 auto;
-    margin-top: 20px;
-    background: red;
-    overflow: auto;
+#container {
+  width: 1200px;
+
+  margin: 0 auto;
+  margin-top: 20px;
+  background: #ececec;
+  overflow: auto;
 }
 
-#config{
-    padding-top: 50px; 
-    margin-left: 850px;
+#config {
+  padding-top: 50px;
+  margin-left: 850px;
 }
 
-#table{
-    display: block;
-    font-family: 'Verdana';
-    margin-top: 20px;
+#table {
+  display: block;
+  font-family: "Verdana";
+  margin-top: 20px;
 }
 
-#faster{
-    font-family : 'Verdana';
-    margin-top: 20px;
+#faster {
+  font-family: "Verdana";
+  margin-top: 20px;
 }
-#download{
-    margin-top: 100px;
-    padding: 7px;
+#download {
+  margin-top: 70px;
+  padding: 7px;
+  background: #3b5998;
+  font-family: "Verdana";
+  color: white;
 }
 
-#runBest{
-    margin-top: 100px;
-    margin-left: 40px;
-    padding: 7px;
+#runBest {
+  margin-top: 70px;
+  margin-left: 55px;
+  padding: 7px;
+  font-family: "Verdana";
+  background: #3b5998;
+  color: white;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+tr {
+  border-bottom: 1px solid #8080806e;
+  height: 40px;
+}
+
+#rate{
+    height: 40px;;
 }

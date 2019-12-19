@@ -1,3 +1,4 @@
+// Activation functions for neural network
 class ActivationFunction {
   constructor(func, dfunc) {
     this.func = func;
@@ -12,12 +13,13 @@ let sigmoid = new ActivationFunction(
 
 let tanh = new ActivationFunction(
   x => Math.tanh(x),
-  y => 1 - (y * y)
+  y => 1 - y * y
 );
 
+
+// Neural network class
 class NeuralNetwork {
-  /*
-  * if first argument is a NeuralNetwork the constructor clones it*/
+  //if first argument is a NeuralNetwork the constructor clones it
   constructor(in_nodes, hid_nodes, out_nodes) {
     if (in_nodes instanceof NeuralNetwork) {
       let a = in_nodes;
@@ -36,8 +38,8 @@ class NeuralNetwork {
       this.output_nodes = out_nodes;
 
       this.weights_ih = new Matrix(this.hidden_nodes, this.input_nodes);
-      this.weights_ho = new Matrix(this.output_nodes, this.hidden_nodes);
       this.weights_ih.randomize();
+      this.weights_ho = new Matrix(this.output_nodes, this.hidden_nodes);
       this.weights_ho.randomize();
 
       this.bias_h = new Matrix(this.hidden_nodes, 1);
@@ -46,11 +48,8 @@ class NeuralNetwork {
       this.bias_o.randomize();
     }
 
-
     this.setLearningRate();
     this.setActivationFunction();
-
-
   }
 
   setLearningRate(learning_rate = 0.1) {
@@ -61,8 +60,6 @@ class NeuralNetwork {
     this.activation_function = func;
   }
 
-
-  
   fit(input_array, target_array) {
     // Generating the Hidden Outputs
     let inputs = Matrix.toMatrix(input_array);
@@ -89,7 +86,6 @@ class NeuralNetwork {
     gradients.multiply(output_errors);
     gradients.multiply(this.learning_rate);
 
-
     // Calculate deltas
     let hidden_T = Matrix.transpose(hidden);
     let weight_ho_deltas = Matrix.multiply(gradients, hidden_T);
@@ -115,20 +111,14 @@ class NeuralNetwork {
     this.weights_ih.add(weight_ih_deltas);
     // Adjust the bias by its deltas (which is just the gradients)
     this.bias_h.add(hidden_gradient);
-
-    // outputs.print();
-    // targets.print();
-    // error.print();
   }
 
-
   predict(input_array) {
-
     // Generating the Hidden Outputs
     let inputs = Matrix.toMatrix(input_array);
     let hidden = Matrix.multiply(this.weights_ih, inputs);
     hidden.add(this.bias_h);
-    // activation function!
+    // activation function
     hidden.map(this.activation_function.func);
 
     // Generating the output's output!
@@ -140,23 +130,19 @@ class NeuralNetwork {
     return output.toArray();
   }
 
-
-  
-
-
   // Adding function for neuro-evolution
   copy() {
     return new NeuralNetwork(this);
   }
 
-  
+  // tweaking the weights by small random values
+  // weights which are tweaked are selected based on some probability
   mutate(rate) {
-    function func(val){
+    function func(val) {
       let probability = Math.random();
-      if(rate > probability){
+      if (rate > probability) {
         return val + probability;
-      }
-      else return val;
+      } else return val;
     }
 
     this.weights_ih.map(func);
@@ -164,7 +150,4 @@ class NeuralNetwork {
     this.bias_h.map(func);
     this.bias_o.map(func);
   }
-
-
-
 }
