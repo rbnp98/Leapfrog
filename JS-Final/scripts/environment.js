@@ -21,9 +21,15 @@ class Environment{
     
 
     setupCanvas(gameObj){ 
-        gameObj.container = document.getElementById('container');
+        // gameObj.container = document.getElementsByClassName('container')[i];
+         gameObj.container = document.createElement('div');
+         gameObj.container.setAttribute('id', 'container');
+         document.body.appendChild(gameObj.container);
+
+        // console.log(gameObj.container);
     
         gameObj.canvas = document.createElement('canvas');
+        gameObj.canvas.setAttribute('id', 'canvas')
         gameObj.canvas.style.float = 'left';
         gameObj.ctx = gameObj.canvas.getContext('2d');
         gameObj.container.appendChild(gameObj.canvas);
@@ -32,18 +38,14 @@ class Environment{
     }
 
     setupSidePanel(gameObj){
-        gameObj.container = document.getElementById('container');
+        // gameObj.container = document.getElementsByClassName('container')[n];
      
         gameObj.config = document.createElement('div');
-        gameObj.config.style.marginLeft = '950px';
+        gameObj.config.setAttribute('id', 'config');
+        gameObj.config.style.marginLeft = '850px';
 
         var table = document.createElement('table');
-        // table.style.float = 'left';
-        table.style.display = 'block';
-
-        table.style.fontFamily = 'Verdana';
-        table.style.marginTop = '20px';
-        //  table.style.display = 'inline';
+        table.setAttribute('id', 'table');
 
         var score = document.createElement('tr');
         var scorename = document.createElement('td');
@@ -109,10 +111,10 @@ class Environment{
         table.appendChild(mutation);
 
         var fastForward = document.createElement('form');
-        fastForward.style.fontFamily = 'Verdana';
+        fastForward.setAttribute('id', 'faster');
         fastForward.innerHTML = 'Game Speed<br>';
         var ffRange = document.createElement('input');
-        ffRange.setAttribute('id', 'speed');
+        ffRange.setAttribute('class', 'speed');
         ffRange.setAttribute('type', 'range');
         ffRange.setAttribute('min', '0');
         ffRange.setAttribute('max', '40');
@@ -120,6 +122,7 @@ class Environment{
         fastForward.appendChild(ffRange);
 
         download = document.createElement('button');
+        download.setAttribute('id', 'download');
         download.addEventListener('click',function(){
                 let currentBestBird = gameObj.birds[0].brain; 
                 let currentBestBirdJson = JSON.stringify(currentBestBird);
@@ -133,33 +136,28 @@ class Environment{
                 downloadAnchorNode.click();
                 downloadAnchorNode.remove();
                 });
-        download.setAttribute('id', 'download')
+        
         download.innerHTML = 'Download Best';
-        download.style.clear ='left';
-        download.style.marginTop ='100px';
 
        runBest = document.createElement('button');
+       runBest.setAttribute('id', 'runBest');
+       
+       
        runBest.addEventListener('click', function(){
 
         gameObj.birds = [];
         gameObj.counter = 0;
         gameObj.pipes = [];
-
         gameObj.birds.push(bestBird);
         gameObj.score = 0;
-        runBest.disabled = 'true';
 
 
        });
   
 
 
-        runBest.setAttribute('id', 'runBest')
+        
         runBest.innerHTML = 'Load Best';
-        runBest.style.clear ='left';
-        runBest.style.marginTop ='100px';
-        runBest.style.marginLeft ='50px';
-
 
        
 
@@ -190,22 +188,6 @@ class Environment{
         this.aliveVal.innerHTML = gameObj.alive;
       }
 
-
-
-    uploader(gameObj){
-        
-        let bestBird2 = localStorage.getItem('bestBird');
-        let birdget = JSON.parse(bestBird2);
-        console.log(birdget)
-
-    }
-      
-    // getRate(e){
-    //     var e = document.getElementsByTagName('select');
-        
-    //    var rate = e.options[e.selectedIndex].text;
-    //     return rate;
-    // }
 }
 
 

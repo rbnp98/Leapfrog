@@ -1,35 +1,38 @@
 
 class Bird {
   constructor(brain) {
-    this.y = HEIGHT / 2;
-    this.x = 64;
-    this.height = 28;
     this.width = 28;
+    this.height = 28;
+    this.x = 64;
+    this.y = HEIGHT / 2;
+  
+    
+    
 
-    this.gravity = 0.8;
-    this.lift = -12;
+    this.gravity = 0.65;
+    this.upthrust = -10;
     this.velocity = 0;
+
+    this.image = new Image();
+    this.image.src = "./images/bird.png";
+
+    this.inputs = [];
+    this.outputs = [];
+    
+    if (brain) {
+      this.brain = brain.copy();
+    } else {
+      this.brain = new NeuralNetwork(5, 7, 2);
+    }
 
     this.score = 0;
     this.fitness = 0;
 
-    this.inputs = [];
-    this.outputs = [];
-
-    if (brain) {
-      this.brain = brain.copy();
-    } else {
-      this.brain = new NeuralNetwork(5, 8, 2);
-    }
-
-    this.birdImg = new Image();
-    this.birdImg.src = "./images/bird.png";
+    
   }
 
   draw(ctx) {
-    ctx.beginPath();
-    ctx.drawImage(this.birdImg, this.x, this.y, this.width, this.height);
-    ctx.closePath();
+    ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
   }
 
   update() {
@@ -40,7 +43,7 @@ class Bird {
   }
 
   flap() {
-    this.velocity += this.lift;
+    this.velocity += this.upthrust;
   }
 
  
@@ -56,27 +59,28 @@ class Bird {
     return false;
   }
 
-  mutate(mutationRate = 0.05) {
-    this.brain.mutate(mutationRate);
+  watch(pipes){
+    let closestPipe = null;
+    let closestDistance = 10000000000;
+    for (let pipe of pipes) {
+      let d = (pipe.x + pipe.width) - this.x;
+      if (d < closestDistance && d > 0) {
+        closestPipe = pipe;
+        closestDistance = d;
+      }
+    }
+    return closestPipe;
   }
 
   learn(pipes) {
     // To find the closest pipe
-    let closest = null;
-    let closestDistance = Infinity;
-    for (let i = 0; i < pipes.length; i++) {
-      let d = (pipes[i].x + pipes[i].width) - this.x;
-      if (d < closestDistance && d > 0) {
-        closest = pipes[i];
-        closestDistance = d;
-      }
-    }
+    var obstacle = this.watch(pipes);
 
-    //inputs for nn (features)
+    //inputs for nn (features) and normalizing them
     this.inputs[0] = this.y / HEIGHT;
-    this.inputs[1] = closest.top / HEIGHT;
-    this.inputs[2] = closest.bottom / HEIGHT;
-    this.inputs[3] = closest.x / WIDTH;
+    this.inputs[1] = obstacle.top / HEIGHT;
+    this.inputs[2] = obstacle.bottom / HEIGHT;
+    this.inputs[3] = obstacle.x / WIDTH;
     this.inputs[4] = this.velocity / 10;
 
     this.outputs = this.brain.predict(this.inputs);
@@ -86,9 +90,8 @@ class Bird {
     }
 
   }
-
-  outOfCanvas() {
-    return (this.y > HEIGHT || this.y < 0);
+  mutate(mutationRate = 0.05) {
+    this.brain.mutate(mutationRate);
   }
 
 

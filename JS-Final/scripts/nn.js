@@ -1,5 +1,3 @@
-// Other techniques for learning
-
 class ActivationFunction {
   constructor(func, dfunc) {
     this.func = func;
@@ -17,14 +15,6 @@ let tanh = new ActivationFunction(
   y => 1 - (y * y)
 );
 
-// Standard Normal variate using Box-Muller transform.
-function gaussianRandom(r) {
-  let rand = 0;
-  for (let i = 0; i < r; i += 1) {
-    rand += Math.random();
-  }
-  return rand / 6;
-}
 class NeuralNetwork {
   /*
   * if first argument is a NeuralNetwork the constructor clones it*/
@@ -75,7 +65,7 @@ class NeuralNetwork {
   
   fit(input_array, target_array) {
     // Generating the Hidden Outputs
-    let inputs = Matrix.fromArray(input_array);
+    let inputs = Matrix.toMatrix(input_array);
     let hidden = Matrix.multiply(this.weights_ih, inputs);
     hidden.add(this.bias_h);
     // activation function!
@@ -87,7 +77,7 @@ class NeuralNetwork {
     outputs.map(this.activation_function.func);
 
     // Convert array to matrix object
-    let targets = Matrix.fromArray(target_array);
+    let targets = Matrix.toMatrix(target_array);
 
     // Calculate the error
     // ERROR = TARGETS - OUTPUTS
@@ -135,7 +125,7 @@ class NeuralNetwork {
   predict(input_array) {
 
     // Generating the Hidden Outputs
-    let inputs = Matrix.fromArray(input_array);
+    let inputs = Matrix.toMatrix(input_array);
     let hidden = Matrix.multiply(this.weights_ih, inputs);
     hidden.add(this.bias_h);
     // activation function!

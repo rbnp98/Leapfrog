@@ -1,6 +1,6 @@
 
-const WIDTH = 900;
-const HEIGHT = 500;
+const WIDTH = 800;
+const HEIGHT = 480;
 
 const FPS = 40;
 
