@@ -109,6 +109,7 @@ class Game {
       for (let i = this.pipes.length - 1; i >= 0; i--) {
         this.pipes[i].update();
 
+        // checking collision and position of bird is not outside of the canvas
         for (let j = 0; j < this.birds.length; j++) {
           if (
             this.birds[j].hits(this.pipes[i]) ||
@@ -129,6 +130,8 @@ class Game {
           }
         }
       }
+
+      // if all birds die then reset and call evolution
       if (this.birds.length === 0) {
         this.counter = 0;
         this.pipes = [];
@@ -139,7 +142,7 @@ class Game {
         this.birdsRecord = [];
       }
       
-      this.env.updateInfo(this);
+      this.env.updateInfo(this); // updating side panels info
     }
   }
 }
