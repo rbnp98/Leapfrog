@@ -40,10 +40,10 @@ class Environment {
     gameObj.config.style.marginLeft = "850px";
 
     // table for stats
-    let table = document.createElement("table");
+    var table = document.createElement("table");
     table.setAttribute("id", "table");
-    let score = document.createElement("tr"); // add score
-    let scorename = document.createElement("td");
+    var score = document.createElement("tr"); // add score
+    var scorename = document.createElement("td");
     scorename.style.paddingRight = "70px";
     scorename.innerHTML = "Score";
     this.scoreval = document.createElement("td");
@@ -52,8 +52,8 @@ class Environment {
     score.appendChild(this.scoreval);
     table.appendChild(score);
 
-    let highest = document.createElement("tr");// add highscore
-    let highestname = document.createElement("td");
+    var highest = document.createElement("tr");// add highscore
+    var highestname = document.createElement("td");
     highestname.style.paddingRight = "70px";
     highestname.innerHTML = "Highest";
     this.highestval = document.createElement("td");
@@ -62,8 +62,8 @@ class Environment {
     highest.appendChild(this.highestval);
     table.appendChild(highest);
 
-    let generation = document.createElement("tr");// add generation
-    let generationName = document.createElement("td");
+    var generation = document.createElement("tr");// add generation
+    var generationName = document.createElement("td");
     generationName.style.paddingRight = "70px";
     generationName.innerHTML = "Generation";
     this.generationVal = document.createElement("td");
@@ -72,8 +72,8 @@ class Environment {
     generation.appendChild(this.generationVal);
     table.appendChild(generation);
 
-    let alive = document.createElement("tr");// add alive stat
-    let aliveName = document.createElement("td");
+    var alive = document.createElement("tr");// add alive stat
+    var aliveName = document.createElement("td");
     aliveName.style.paddingRight = "70px";
     aliveName.innerHTML = "Alive";
     this.aliveVal = document.createElement("td");
@@ -82,8 +82,8 @@ class Environment {
     alive.appendChild(this.aliveVal);
     table.appendChild(alive);
 
-    let mutation = document.createElement("tr");// mutation rate slider
-    let mutationName = document.createElement("td");
+    var mutation = document.createElement("tr");// mutation rate slider
+    var mutationName = document.createElement("td");
     mutationName.style.paddingRight = "70px";
     mutationName.innerHTML = "Mutation rate";
     this.mutationVal = document.createElement("select");
@@ -105,10 +105,10 @@ class Environment {
     mutation.appendChild(this.mutationVal);
     table.appendChild(mutation);
 
-    let fastForward = document.createElement("form"); // add speed slider
+    var fastForward = document.createElement("form"); // add speed slider
     fastForward.setAttribute("id", "faster");
     fastForward.innerHTML = "Game Speed<br>";
-    let ffRange = document.createElement("input");
+    var ffRange = document.createElement("input");
     ffRange.setAttribute("class", "speed");
     ffRange.setAttribute("type", "range");
     ffRange.setAttribute("min", "0");
@@ -121,10 +121,10 @@ class Environment {
     download.addEventListener("click", function() {
       let currentBestBird = gameObj.birds[0].brain;
       let currentBestBirdJson = JSON.stringify(currentBestBird);
-      let dataStr =
+      var dataStr =
         "data:text/json;charset=utf-8," +
         encodeURIComponent(currentBestBirdJson);
-      let downloadAnchorNode = document.createElement("a");
+      var downloadAnchorNode = document.createElement("a");
       downloadAnchorNode.setAttribute("href", dataStr);
       downloadAnchorNode.setAttribute("download", "best.json");
       downloadAnchorNode.click();
