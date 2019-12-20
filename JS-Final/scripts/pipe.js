@@ -4,12 +4,10 @@ class Pipe {
     this.gap = 130;
 
     this.x = WIDTH;
-
-    this.top = Math.floor(Math.random() * ((1 / 2) * HEIGHT) + HEIGHT / 8);
-    this.bottom = this.top + this.gap;
-
     this.height = HEIGHT;
     this.speed = 5;
+    this.top = Math.floor(Math.random() * ((1 / 2) * HEIGHT) + HEIGHT / 8);
+    this.bottom = this.top + this.gap;
 
     this.pipeUp = new Image();
     this.pipeUp.src = "./images/pipeUp.png";

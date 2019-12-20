@@ -47,8 +47,8 @@ function mutation(child, mutationRate) {
 
 // Evolution process
 function evolution(gameObj, mutationRate) {
+  
   normalizeFitness(gameObj.birdsRecord);
-
   for (let i = 0; i < gameObj.population; i++) {
     var father = naturalSelection(gameObj.birdsRecord);
     var mother = naturalSelection(gameObj.birdsRecord);

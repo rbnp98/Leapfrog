@@ -1,4 +1,3 @@
-var that;
 var download;
 var runBest;
 
@@ -17,7 +16,6 @@ class Environment {
     this.setupCanvas(gameObj);
     this.setupSidePanel(gameObj);
     this.setupSidePanel = this.setupSidePanel.bind(this);
-    that = this;
   }
 
   // Create canvas
@@ -92,12 +90,12 @@ class Environment {
     this.mutationVal.setAttribute("id", "rate");
 
     this.rate1 = document.createElement("option");
-    this.rate1.setAttribute("value", "0.025");
-    this.rate1.innerHTML = "0.025";
+    this.rate1.setAttribute("value", "0.05");
+    this.rate1.innerHTML = "0.05";
     this.mutationVal.appendChild(this.rate1);
     this.rate2 = document.createElement("option");
-    this.rate2.setAttribute("value", "0.05");
-    this.rate2.innerHTML = "0.05";
+    this.rate2.setAttribute("value", "0.075");
+    this.rate2.innerHTML = "0.075";
     this.mutationVal.appendChild(this.rate2);
     this.rate3 = document.createElement("option");
     this.rate3.setAttribute("value", "0.1");
@@ -140,7 +138,7 @@ class Environment {
       gameObj.birds = [];
       gameObj.counter = 0;
       gameObj.pipes = [];
-      gameObj.birds.push(bestBird);
+      gameObj.birds.push(bestBird); // pushing the saved optimum model of bird
       gameObj.score = 0;
     });
     runBest.innerHTML = "Load Best";

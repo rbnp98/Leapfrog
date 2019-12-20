@@ -1,3 +1,17 @@
+/**
+ *
+ *
+ * @param {*} feature
+ * @param {*} MIN
+ * @param {*} MAX
+ * @returns scaled feature
+ */
+function featureScaling(feature, MIN, MAX) {
+  // min-max normalization
+  let scaledFeature = (feature - MIN) / (MAX - MIN);
+  return scaledFeature;
+}
+
 class Bird {
   constructor(brain) {
     this.width = 28;
@@ -15,6 +29,7 @@ class Bird {
     this.inputs = [];
     this.outputs = [];
 
+    //if a neural network is given to constructor, it will be replicated else create a new neural network
     if (brain) {
       this.brain = brain.copy();
     } else {
@@ -31,7 +46,6 @@ class Bird {
 
   update() {
     this.score++;
-    // console.log(this.score);
     this.velocity += this.gravity;
     this.y += this.velocity;
   }
@@ -68,15 +82,16 @@ class Bird {
     return closestPipe;
   }
 
+  // Using neural network to decide the movement
   learn(pipes) {
     var obstacle = this.watch(pipes);
 
-    //inputs for nn (features) and normalizing them
-    this.inputs[0] = this.y / HEIGHT;
-    this.inputs[1] = obstacle.top / HEIGHT;
-    this.inputs[2] = obstacle.bottom / HEIGHT;
-    this.inputs[3] = obstacle.x / WIDTH;
-    this.inputs[4] = this.velocity / 10;
+    // normlized inputs for nn (features)
+    this.inputs[0] = featureScaling(this.y, 0, HEIGHT);
+    this.inputs[1] = featureScaling(this.velocity, 0, 10);
+    this.inputs[2] = featureScaling(obstacle.top, 0, HEIGHT);
+    this.inputs[3] = featureScaling(obstacle.bottom, 0, HEIGHT);
+    this.inputs[4] = featureScaling(obstacle.x, 0, WIDTH);
 
     this.outputs = this.brain.predict(this.inputs);
 
@@ -84,6 +99,8 @@ class Bird {
       this.flap();
     }
   }
+
+  // mutating the bird
   mutate(mutationRate = 0.05) {
     this.brain.mutate(mutationRate);
   }

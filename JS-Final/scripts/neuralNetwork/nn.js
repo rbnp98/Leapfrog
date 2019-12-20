@@ -16,7 +16,6 @@ let tanh = new ActivationFunction(
   y => 1 - y * y
 );
 
-
 // Neural network class
 class NeuralNetwork {
   //if first argument is a NeuralNetwork the constructor clones it
